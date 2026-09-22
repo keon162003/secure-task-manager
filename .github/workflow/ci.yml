@@ -34,3 +34,6 @@ jobs:
         run: pytest
               - name: Run security scan
         run: bandit -r . -x ./venv,test_app.py
+
+              - name: Build application
+        run: python -m compileall app.py
