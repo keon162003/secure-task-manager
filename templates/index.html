@@ -99,6 +99,7 @@
                 type="text"
                 name="title"
                 placeholder="Enter a new task"
+                maxlength="200"
                 required
             >
 
@@ -107,6 +108,10 @@
             </button>
 
         </form>
+
+        {% if error %}
+            <p role="alert">{{ error }}</p>
+        {% endif %}
 
         <div class="tasks">
 
